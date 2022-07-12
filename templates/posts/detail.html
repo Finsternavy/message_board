@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }}{% endblock title %}
+
+{% block content %}
+<h1>{{ post.title }}</h1>
+<strong>Created on: {{ post.created_on }}</strong>
+<p>{{ post.body }}</p>
+<div class="card">
+    <div class="card-body">
+      <p class="card-text">{{ post.body }}</p>
+      <a href="{% url 'post_list'%}" class="card-link">Return To Posts</a>
+    </div>
+  </div>
+<br />
+{% endblock content %}
